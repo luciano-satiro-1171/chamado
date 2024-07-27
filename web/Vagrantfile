@@ -1,0 +1,28 @@
+# author:      luciano dos santos
+# contact:     https://www.linkedin.com/in/luciano-dos-santos-satiro
+# created:     16/07/2024
+# revision:    27/07/2024
+# rule 1:      sem acento
+# rule 2:      restante em minusculo
+# description: cria vm no virtualbox usando o vagrant
+
+# obs.: para saber se o vagrant ainda esta na versao 2 execute: vagrant --version
+
+Vagrant.configure("2") do |config|
+
+    # configuracoes do virtualbox:
+    config.vm.provider "virtualbox" do |vb|
+      vb.name = "web"
+      vb.memory = "512"
+      vb.cpus = "1"
+#      vb.gui = "true"
+    end # fim do |vb|
+
+  # configuracoes do vagrant:
+  config.vm.box = "xenial-server-cloudimg-amd64-vagrant"
+  config.vm.network "public_network", ip: "192.168.10.51"
+  config.vm.provision "shell", path: "script.sh"
+  config.vm.provision "shell", path: "web.sh"
+  config.vm.synced_folder "html/", "/var/www/html/"
+  config.vm.synced_folder "conf/", "/opt/"
+end # fim do |config|

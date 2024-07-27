@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<!-- 
+     author:      luciano dos santos
+     contact:     https://www.linkedin.com/in/luciano-dos-santos-satiro
+     created:     23/06/2023
+     revision:    25/07/2024
+     rule 1:      sem acento
+     rule 2:      restante em minusculo
+     description: formulario para abertura de chamado tecnico
+-->
+
+<html lang="pt-br">
+   <head>
+      <!-- metadados -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- favicon da pagina -->
+      <link rel="shortcut icon" type="image/x-icon" href="./robot_favicon.ico">
+
+      <!-- titulo da pagina -->
+      <title>Suporte aos Usuários do BEsCom</title>
+
+      <!-- design da pagina -->
+      <style>
+         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+         }
+
+         .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         }
+
+         h2 {
+            margin-top: 0;
+         }
+
+         form {
+            margin-bottom: 20px;
+         }
+
+         label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+         }
+
+         input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+         }
+
+         input[type="submit"] {
+            background-color: #3b16b6;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+         }
+
+         input[type="submit"]:hover {
+            background-color: #5846ca;
+         }
+      </style>
+   </head>
+
+   <body>
+      <div class="container">
+         <form name="chamado" action="registrar.php" method="post" accept-charset='utf-8'>
+            <fieldset>
+               <legend>Suporte aos Usuários do BEsCom</legend>
+
+               <h3>Abertura de Chamado</h3>
+
+               <label for="Secao">Seção/Pel:*</label>
+               <input type="text" id="Secao" name="Secao" size="25" placeholder="Digite seu local de trabalho" required autofocus />
+
+               <label for="Graduacao">Graduação:*</label>
+               <input type="text" id="Graduacao" name="Graduacao" size="5" required />
+
+               <label for="Nome">Nome de Guerra:*</label>
+               <input type="text" id="Nome" name="Nome" size="15" required />
+
+               <label for="Ramal">Ramal (Opcional):</label>
+               <input type="text" id="Ramal" name="Ramal" size="10" />
+
+               <label for="Telefone">Telefone (Opcional):</label>
+               <input type="text" id="Telefone" name="Telefone" size="15" placeholder="Ex: (21) 98..." />
+
+               <label for="Descricao">Descrição do Chamado:*</label>
+               <textarea id="Descricao" name="Descricao" rows="8" cols="50" placeholder="Digite o ocorrido aqui" required></textarea>
+
+               <!-- botao para envio do formulario -->
+               <input type="submit" name="submit" value="Enviar" />
+            </fieldset>
+         </form>
+      </div>
+   </body>
+</html>

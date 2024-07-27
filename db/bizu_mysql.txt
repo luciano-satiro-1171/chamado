@@ -1,0 +1,42 @@
+MySQL para abertura de chamados:
+
+apt-get -y install mariadb-server^
+
+mv -v ./config.php /opt
+
+mysql -u root -p
+CREATE USER 'chamado'@'%' IDENTIFIED BY 'chamado123';
+CREATE DATABASE chamado_db;
+GRANT ALL PRIVILEGES ON chamado_db.* TO 'chamado'@'%';
+FLUSH PRIVILEGES;
+exit
+mysql -u chamado -p'chamado123'
+USE chamado_db;
+CREATE TABLE registro_tb (
+Id SMALLINT AUTO_INCREMENT PRIMARY KEY,
+Secao VARCHAR(25) NOT NULL,
+Graduacao VARCHAR(15) NOT NULL,
+Nome VARCHAR(50) NOT NULL,
+Ramal VARCHAR(25),
+Telefone VARCHAR(25),
+Descricao VARCHAR(15000) NOT NULL,
+Data timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+exit
+
+# sudo sed -i 's/bind-address/#bind-address/g' /etc/mysql/mariadb.conf.d/50-server.cnf
+
+#vim /etc/mysql/mysql.conf.d/mysqld.cnf 
+#    # comentar a linha:
+#    #bind-address           = 127.0.0.1
+
+sudo systemctl restart mysql.service
+
+# no outro vagrant web...
+sudo apt install apache2 php-mysql libapache2-mod-php
+
+sudo systemctl restart apache2.service
+
+
+# usando nginx:
+sudo cp /vagrant/nginx.conf /etc/nginx/conf.d/default.conf
