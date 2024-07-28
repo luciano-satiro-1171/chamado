@@ -26,6 +26,10 @@ IF_ELSE() {
 }
 
 # operacoes:
+# verifica se o script esta sendo executado como root:
+test "$(id -u)" -eq 0
+	IF_ELSE "executado como root" "nao executado como root" || exit 1
+
 # altera o repositorio:
 sed -i 's/deb\ http:\/\/archive.ubuntu.com\/ubuntu/deb\ http:\/\/br.archive.ubuntu.com\/ubuntu/g' /etc/apt/sources.list
 	IF_ELSE "sources.list alterado" "sources.list nao alterado"

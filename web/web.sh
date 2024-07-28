@@ -26,6 +26,10 @@ IF_ELSE() {
 }
 
 # operacoes:
+# verifica se o script esta sendo executado como root:
+test "$(id -u)" -eq 0
+	IF_ELSE "executado como root" "nao executado como root" || exit 1
+
 # instala pacotes:
 for PACOTE in $LISTA; do
 	apt-get -y install "$PACOTE"

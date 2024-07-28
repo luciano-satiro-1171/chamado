@@ -29,6 +29,10 @@ IF_ELSE() {
 }
 
 # operacoes:
+# verifica se o script esta sendo executado como root:
+test "$(id -u)" -eq 0
+	IF_ELSE "executado como root" "nao executado como root" || exit 1
+
 # pre-configura o mysql:
 debconf-set-selections <<< "mysql-server mysql-server/root_password password $PASS"
     IF_ELSE "root_password configurado" "root_password nao configurado"
