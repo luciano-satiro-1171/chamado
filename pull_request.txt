@@ -1,0 +1,86 @@
+Criar um pull request em um projeto de outra pessoa no GitHub:
+
+### 1. Fork o Repositório
+Um fork cria uma cópia do repositório no seu próprio perfil GitHub.
+
+1. Acesse o repositório original no GitHub.
+2. Clique no botão "Fork" no canto superior direito da página.
+3. Isso criará um repositório em seu próprio perfil GitHub.
+
+### 2. Clone o Repositório Forked
+Clone a cópia do repositório para o seu ambiente local.
+
+1. No seu perfil GitHub, vá para o repositório forked.
+2. Clique no botão "Code" e copie a URL do repositório.
+3. No terminal, execute o comando:
+    ```bash
+    git clone <URL do repositório>
+    ```
+4. Navegue até o diretório do repositório clonado:
+    ```bash
+    cd <nome do repositório>
+    ```
+
+### 3. Configure o Remoto Upstream
+Adicione o repositório original como um remoto chamado `upstream` para que você possa buscar alterações futuras.
+
+1. No terminal, execute:
+    ```bash
+    git remote add upstream <URL do repositório original>
+    ```
+2. Verifique a configuração remota:
+    ```bash
+    git remote -v
+    ```
+
+### 4. Crie um Branch para Suas Alterações
+Crie e mude para um novo branch onde você fará suas alterações.
+
+1. No terminal, execute:
+    ```bash
+    git checkout -b <nome-do-branch>
+    ```
+
+### 5. Faça Suas Alterações
+Edite o código conforme necessário. Depois de fazer as alterações:
+
+1. Adicione os arquivos modificados ao staging:
+    ```bash
+    git add <arquivos modificados>
+    ```
+2. Faça commit das suas alterações:
+    ```bash
+    git commit -m "Descrição das suas alterações"
+    ```
+
+### 6. Envie o Branch para o Seu Fork
+Envie o branch com as alterações para o seu repositório forked no GitHub.
+
+1. No terminal, execute:
+    ```bash
+    git push origin <nome-do-branch>
+    ```
+
+### 7. Crie o Pull Request
+Agora você está pronto para criar um pull request.
+
+1. No GitHub, vá para o seu repositório forked.
+2. Clique no botão "Compare & pull request".
+3. Adicione um título e uma descrição para o seu pull request.
+4. Clique em "Create pull request".
+
+### 8. Acompanhe o Pull Request
+Acompanhe o pull request para ver se há comentários ou alterações solicitadas pelo mantenedor do projeto. Esteja pronto para ajustar seu código conforme necessário.
+
+### Dicas Adicionais
+
+- **Sincronização Regular**: Mantenha seu fork atualizado com as mudanças do repositório original.
+  ```bash
+  git fetch upstream
+  git checkout main
+  git merge upstream/main
+  ```
+
+- **Boa Comunicação**: Escreva descrições claras e concisas nos commits e no pull request.
+
+Seguindo esses passos, você conseguirá criar um pull request de forma eficiente e colaborativa.
