@@ -70,3 +70,6 @@ git push
 git status
 
 # verifique no projeto do github se houve alteracoes...
+
+# se fizer alteracoes no github para fazer o download:
+git pull
