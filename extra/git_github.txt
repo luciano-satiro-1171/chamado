@@ -71,5 +71,5 @@ git status
 
 # verifique no projeto do github se houve alteracoes...
 
-# se fizer alteracoes no github para fazer o download:
+# caso faça alteracoes no github usando o browser voce faz o atualizacao para o seu PC executando:
 git pull
