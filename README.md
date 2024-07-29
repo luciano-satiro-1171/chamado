@@ -31,43 +31,47 @@ Este projeto foi desenvolvido com base na minha experiência anterior no quartel
 - Terminal 2 (web):
 - `cd chamado/web/`.
 
-Verifique 2 IPs livres na sua rede. Então faça ajustes de endereço ip nos arquivos:
-Termina 1 (db):
-`nano Vagrantfile` # para salvar e sair: Ctrl + O depois Ctrl + X
-Termina 2 (web):
-`nano Vagrantfile` # para salvar e sair: Ctrl + O depois Ctrl + X
-`nano conf/config.php` # para salvar e sair: Ctrl + O depois Ctrl + X
+6. Verifique 2 IPs livres na sua rede. Então faça ajustes de endereço ip nos arquivos:
+- Termina 1 (db):
+- `nano Vagrantfile` # para salvar e sair: Ctrl + O depois Ctrl + X
+- Termina 2 (web):
+- `nano Vagrantfile` # para salvar e sair: Ctrl + O depois Ctrl + X
+- `nano conf/config.php` # para salvar e sair: Ctrl + O depois Ctrl + X
 
-Inicie o banco de dados:
-Terminal 1 (db):
-`vagrant up`.
-Aguarde o banco de dados terminar de iniciar.
-Acesse a VM do banco de dados:
-Terminal 1 (db):
-`vagrant ssh`.
-Verifique os arquivos de log do banco de dados:
-Terminal 1 (db):
-`cat script.log`.
-`cat db.log`.
+7. Inicie o banco de dados:
+- Terminal 1 (db):
+- `vagrant up`.
+- Aguarde o banco de dados terminar de iniciar.
 
-Inicie a página web:
-Terminal 2 (web):
-`vagrant up`.
-Aguarde a página web terminar de iniciar.
-Acesse a VM da página web:
-Terminal 2 (web):
-`vagrant ssh`.
-Verifique os arquivos de log da página web:
-Terminal 2 (web):
-`cat script.log`.
-`cat web.log`.
+8. Acesse a VM do banco de dados:
+- Terminal 1 (db):
+- `vagrant ssh`.
 
-Agora abra o seu browser e acesse os seguintes endereços:
-`http://<ip_da_pagina_web>/chamado/index.html`.
-`http://<ip_da_pagina_web>/chamado/consultar.php`.
+9. Verifique os arquivos de log do banco de dados:
+- Terminal 1 (db):
+- `cat script.log`.
+- `cat db.log`.
 
-Para parar as máquinas virtuais, execute: `vagrant halt`.
-Para destruir as máquinas virtuais, execute: `vagrant destroy`.
+10. Inicie a página web:
+- Terminal 2 (web):
+- `vagrant up`.
+- Aguarde a página web terminar de iniciar.
+
+11. Acesse a VM da página web:
+- Terminal 2 (web):
+- `vagrant ssh`.
+
+12. Verifique os arquivos de log da página web:
+- Terminal 2 (web):
+- `cat script.log`.
+- `cat web.log`.
+
+13. Agora abra o seu browser e acesse os seguintes endereços:
+- `http://<ip_da_pagina_web>/chamado/index.html`.
+- `http://<ip_da_pagina_web>/chamado/consultar.php`.
+
+14. Para parar as máquinas virtuais, execute: `vagrant halt`.
+15. Para destruir as máquinas virtuais, execute: `vagrant destroy`.
 
 ## Contribuição
 Contribuições são sempre bem-vindas! Se você quiser contribuir para este projeto, siga estas etapas:
