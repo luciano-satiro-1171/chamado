@@ -12,24 +12,24 @@ Este projeto foi desenvolvido com base na minha experiência anterior no quartel
 - Instala e configura um servidor web e um servidor de banco de dados usando Shell Scripts.
 
 ## Como Usar
-Certifique-se de ter o Git, Vagrant e o VirtualBox instalados na sua máquina.
-Certifique-se de ter uma imagem do Ubuntu Server 16.04 compatível com o Vagrant.
+1. Certifique-se de ter o Git, Vagrant e o VirtualBox instalados na sua máquina.
+2. Certifique-se de ter uma imagem do Ubuntu Server 16.04 compatível com o Vagrant.
 
-Dica para baixar a imagem do Ubuntu Server 16.04:
-`wget https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-vagrant.box`.
-Adicione ao Vagrant a imagem baixada:
-`vagrant box add xenial-server-cloudimg-amd64-vagrant.box --name xenial-server-cloudimg-amd64-vagrant`.
-Verifique se a imagem foi adicionada:
-`vagrant box list`.
+3. Dica para baixar a imagem do Ubuntu Server 16.04:
+- `wget https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-vagrant.box`.
+- Adicione ao Vagrant a imagem baixada:
+- `vagrant box add xenial-server-cloudimg-amd64-vagrant.box --name xenial-server-cloudimg-amd64-vagrant`.
+- Verifique se a imagem foi adicionada:
+- `vagrant box list`.
 
-Clone este repositório para a sua máquina local (Exemplo):
-`git clone https://github.com/luciano-satiro-1171/chamado.git`.
+4. Clone este repositório para a sua máquina local (Exemplo):
+- `git clone https://github.com/luciano-satiro-1171/chamado.git`.
 
-Abra 2 terminais. O 1º é para o banco de dados e o 2º para a página web.
-Termina 1 (db):
-`cd chamado/db/`.
-Terminal 2 (web):
-`cd chamado/web/`.
+5. Abra 2 terminais. O 1º é para o banco de dados e o 2º para a página web.
+- Termina 1 (db):
+- `cd chamado/db/`.
+- Terminal 2 (web):
+- `cd chamado/web/`.
 
 Verifique 2 IPs livres na sua rede. Então faça ajustes de endereço ip nos arquivos:
 Termina 1 (db):
