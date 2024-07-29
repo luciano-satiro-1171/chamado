@@ -13,6 +13,7 @@ Este projeto foi desenvolvido com base na minha experiência anterior no quartel
 
 ## Como Usar
 1. Certifique-se de ter o Git, Vagrant e o VirtualBox instalados na sua máquina.
+
 2. Certifique-se de ter uma imagem do Ubuntu Server 16.04 compatível com o Vagrant.
 
 3. Dica para baixar a imagem do Ubuntu Server 16.04:
@@ -71,6 +72,7 @@ Este projeto foi desenvolvido com base na minha experiência anterior no quartel
 - `http://<ip_da_pagina_web>/chamado/consultar.php`.
 
 14. Para parar as máquinas virtuais, execute: `vagrant halt`.
+
 15. Para destruir as máquinas virtuais, execute: `vagrant destroy`.
 
 ## Contribuição
