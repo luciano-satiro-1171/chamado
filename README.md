@@ -22,7 +22,7 @@ Adicione ao Vagrant a imagem baixada:
 Verifique se a imagem foi adicionada:
 `vagrant box list`
 
-Clone este repositório para a sua máquina local (exemplo):
+Clone este repositório para a sua máquina local (Exemplo):
 `git clone https://github.com/luciano-satiro-1171/chamado.git`
 
 Abra 2 terminais. O 1º é para o banco de dados e o 2º para a página web.
