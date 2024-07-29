@@ -17,20 +17,20 @@ Este projeto foi desenvolvido com base na minha experiência anterior no quartel
 2. Certifique-se de ter uma imagem do Ubuntu Server 16.04 compatível com o Vagrant.
 
 3. Dica para baixar a imagem do Ubuntu Server 16.04:
-- `wget https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-vagrant.box`.
+- `wget https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-vagrant.box`
 - Adicione ao Vagrant a imagem baixada:
-- `vagrant box add xenial-server-cloudimg-amd64-vagrant.box --name xenial-server-cloudimg-amd64-vagrant`.
+- `vagrant box add xenial-server-cloudimg-amd64-vagrant.box --name xenial-server-cloudimg-amd64-vagrant`
 - Verifique se a imagem foi adicionada:
-- `vagrant box list`.
+- `vagrant box list`
 
 4. Clone este repositório para a sua máquina local (Exemplo):
-- `git clone https://github.com/luciano-satiro-1171/chamado.git`.
+- `git clone https://github.com/luciano-satiro-1171/chamado.git`
 
 5. Abra 2 terminais. O 1º é para o banco de dados e o 2º para a página web.
 - Termina 1 (db):
-- `cd chamado/db/`.
+- `cd chamado/db/`
 - Terminal 2 (web):
-- `cd chamado/web/`.
+- `cd chamado/web/`
 
 6. Verifique 2 IPs livres na sua rede. Então faça ajustes de endereço ip nos arquivos:
 - Termina 1 (db):
@@ -41,39 +41,39 @@ Este projeto foi desenvolvido com base na minha experiência anterior no quartel
 
 7. Inicie o banco de dados:
 - Terminal 1 (db):
-- `vagrant up`.
+- `vagrant up`
 - Aguarde o banco de dados terminar de iniciar.
 
 8. Acesse a VM do banco de dados:
 - Terminal 1 (db):
-- `vagrant ssh`.
+- `vagrant ssh`
 
 9. Verifique os arquivos de log do banco de dados:
 - Terminal 1 (db):
-- `cat script.log`.
-- `cat db.log`.
+- `cat script.log`
+- `cat db.log`
 
 10. Inicie a página web:
 - Terminal 2 (web):
-- `vagrant up`.
+- `vagrant up`
 - Aguarde a página web terminar de iniciar.
 
 11. Acesse a VM da página web:
 - Terminal 2 (web):
-- `vagrant ssh`.
+- `vagrant ssh`
 
 12. Verifique os arquivos de log da página web:
 - Terminal 2 (web):
-- `cat script.log`.
-- `cat web.log`.
+- `cat script.log`
+- `cat web.log`
 
 13. Agora abra o seu browser e acesse os seguintes endereços:
-- `http://<ip_da_pagina_web>/chamado/index.html`.
-- `http://<ip_da_pagina_web>/chamado/consultar.php`.
+- `http://<ip_da_pagina_web>/chamado/index.html`
+- `http://<ip_da_pagina_web>/chamado/consultar.php`
 
-14. Para parar as máquinas virtuais, execute: `vagrant halt`.
+14. Para parar as máquinas virtuais, execute: `vagrant halt`
 
-15. Para destruir as máquinas virtuais, execute: `vagrant destroy`.
+15. Para destruir as máquinas virtuais, execute: `vagrant destroy`
 
 ## Contribuição
 Contribuições são sempre bem-vindas! Se você quiser contribuir para este projeto, siga estas etapas:
