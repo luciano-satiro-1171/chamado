@@ -16,20 +16,20 @@ Certifique-se de ter o Git, Vagrant e o VirtualBox instalados na sua máquina.
 Certifique-se de ter uma imagem do Ubuntu Server 16.04 compatível com o Vagrant.
 
 Dica para baixar a imagem do Ubuntu Server 16.04:
-`wget https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-vagrant.box`
+`wget https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-vagrant.box`.
 Adicione ao Vagrant a imagem baixada:
-`vagrant box add xenial-server-cloudimg-amd64-vagrant.box --name xenial-server-cloudimg-amd64-vagrant`
+`vagrant box add xenial-server-cloudimg-amd64-vagrant.box --name xenial-server-cloudimg-amd64-vagrant`.
 Verifique se a imagem foi adicionada:
-`vagrant box list`
+`vagrant box list`.
 
 Clone este repositório para a sua máquina local (Exemplo):
-`git clone https://github.com/luciano-satiro-1171/chamado.git`
+`git clone https://github.com/luciano-satiro-1171/chamado.git`.
 
 Abra 2 terminais. O 1º é para o banco de dados e o 2º para a página web.
 Termina 1 (db):
-`cd chamado/db/`
+`cd chamado/db/`.
 Terminal 2 (web):
-`cd chamado/web/`
+`cd chamado/web/`.
 
 Verifique 2 IPs livres na sua rede. Então faça ajustes de endereço ip nos arquivos:
 Termina 1 (db):
@@ -40,34 +40,34 @@ Termina 2 (web):
 
 Inicie o banco de dados:
 Terminal 1 (db):
-`vagrant up`
+`vagrant up`.
 Aguarde o banco de dados terminar de iniciar.
 Acesse a VM do banco de dados:
 Terminal 1 (db):
-`vagrant ssh`
+`vagrant ssh`.
 Verifique os arquivos de log do banco de dados:
 Terminal 1 (db):
-`cat script.log`
-`cat db.log`
+`cat script.log`.
+`cat db.log`.
 
 Inicie a página web:
 Terminal 2 (web):
-`vagrant up`
+`vagrant up`.
 Aguarde a página web terminar de iniciar.
 Acesse a VM da página web:
 Terminal 2 (web):
-`vagrant ssh`
+`vagrant ssh`.
 Verifique os arquivos de log da página web:
 Terminal 2 (web):
-`cat script.log`
-`cat web.log`
+`cat script.log`.
+`cat web.log`.
 
 Agora abra o seu browser e acesse os seguintes endereços:
-`http://<ip_da_pagina_web>/chamado/index.html`
-`http://<ip_da_pagina_web>/chamado/consultar.php`
+`http://<ip_da_pagina_web>/chamado/index.html`.
+`http://<ip_da_pagina_web>/chamado/consultar.php`.
 
-Para parar as máquinas virtuais, execute: `vagrant halt`
-Para destruir as máquinas virtuais, execute: `vagrant destroy`
+Para parar as máquinas virtuais, execute: `vagrant halt`.
+Para destruir as máquinas virtuais, execute: `vagrant destroy`.
 
 ## Contribuição
 Contribuições são sempre bem-vindas! Se você quiser contribuir para este projeto, siga estas etapas:
