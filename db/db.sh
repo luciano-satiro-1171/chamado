@@ -3,7 +3,7 @@
 # author:      luciano dos santos
 # contact:     https://www.linkedin.com/in/luciano-dos-santos-satiro
 # created:     27/07/2024
-# revision:    27/07/2024
+# revision:    30/07/2024
 # rule 1:      sem acento
 # rule 2:      variaveis em maiusculo
 # rule 3:      funcoes em maiusculo
@@ -72,7 +72,7 @@ Data timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
     IF_ELSE "tabela criada" "tabela nao criada"
 
 # permitir acesso remoto:
-sed -i 's/bind-address/#bind-address/g' /etc/mysql/mysql.conf.d/mysqld.cnf
+sed -i 's/bind-address\s*=\s*127.0.0.1/bind-address\ =\ 0.0.0.0/g' /etc/mysql/mysql.conf.d/mysqld.cnf
     IF_ELSE "acesso remoto permitido" "acesso remoto nao permitido"
 
 # reinicia o mysql:
