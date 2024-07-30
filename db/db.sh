@@ -13,9 +13,9 @@
 # variaveis:
 LOG="./db.log"
 LISTA="mysql-server"
-PASS="vagrant"
-USER="chamado"
-PASS_USER="chamado123"
+SQL_PASS_ROOT="vagrant"
+SQL_USER="chamado"
+SQL_PASS_USER="chamado123"
 
 # funcoes:
 # evita repeticao do if e else:
@@ -34,10 +34,10 @@ test "$(id -u)" -eq 0
 	IF_ELSE "executado como root" "nao executado como root" || exit 1
 
 # pre-configura o mysql:
-debconf-set-selections <<< "mysql-server mysql-server/root_password password $PASS"
+debconf-set-selections <<< "mysql-server mysql-server/root_password password $SQL_PASS_ROOT"
     IF_ELSE "root_password configurado" "root_password nao configurado"
 
-debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $PASS"
+debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $SQL_PASS_ROOT"
     IF_ELSE "root_password_again configurado" "root_password_again nao configurado"
 
 # instala pacotes:
@@ -47,16 +47,16 @@ for PACOTE in $LISTA; do
 done
 
 # configuracoes do banco de dados:
-echo "SELECT EXISTS(SELECT 1 FROM mysql.user WHERE user = 'chamado');" | mysql -u root -p"$PASS" | tail -n1 | grep -q 1 || echo "CREATE USER 'chamado'@'%' IDENTIFIED BY 'chamado123';" | mysql -u root -p"$PASS"
+echo "SELECT EXISTS(SELECT 1 FROM mysql.user WHERE user = 'chamado');" | mysql -u root -p"$SQL_PASS_ROOT" | tail -n1 | grep -q 1 || echo "CREATE USER 'chamado'@'%' IDENTIFIED BY 'chamado123';" | mysql -u root -p"$SQL_PASS_ROOT"
     IF_ELSE "usuario criado" "usuario nao criado"
 
-echo "CREATE DATABASE IF NOT EXISTS chamado_db;" | mysql -u root -p"$PASS"
+echo "CREATE DATABASE IF NOT EXISTS chamado_db;" | mysql -u root -p"$SQL_PASS_ROOT"
     IF_ELSE "banco de dados criado" "banco de dados nao criado"
 
-echo "GRANT ALL PRIVILEGES ON chamado_db.* TO 'chamado'@'%';" | mysql -u root -p"$PASS"
+echo "GRANT ALL PRIVILEGES ON chamado_db.* TO 'chamado'@'%';" | mysql -u root -p"$SQL_PASS_ROOT"
     IF_ELSE "privilegios alterado" "privilegios nao alterado"
 
-echo "FLUSH PRIVILEGES;" | mysql -u root -p"$PASS"
+echo "FLUSH PRIVILEGES;" | mysql -u root -p"$SQL_PASS_ROOT"
     IF_ELSE "privilegios atualizados" "privilegios nao atualizados"
 
 echo "USE chamado_db; CREATE TABLE IF NOT EXISTS registro_tb (
@@ -68,7 +68,7 @@ Ramal VARCHAR(25),
 Telefone VARCHAR(25),
 Descricao VARCHAR(15000) NOT NULL,
 Data timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-);" | mysql -u $USER -p"$PASS_USER"
+);" | mysql -u $SQL_USER -p"$SQL_PASS_USER"
     IF_ELSE "tabela criada" "tabela nao criada"
 
 # permitir acesso remoto:
