@@ -3,7 +3,7 @@
 # author:      luciano dos santos
 # contact:     https://www.linkedin.com/in/luciano-dos-santos-satiro
 # created:     09/03/2024
-# revision:    27/07/2024
+# revision:    31/07/2024
 # rule 1:      sem acento
 # rule 2:      variaveis em maiusculo
 # rule 3:      funcoes em maiusculo
@@ -43,8 +43,8 @@ apt-get -y upgrade
 
 # instala pacotes:
 for PACOTE in $LISTA; do
-        apt-get -y install $PACOTE
-                IF_ELSE "$PACOTE foi instalado" "$PACOTE nao foi instalado"
+    apt-get -y install $PACOTE
+        IF_ELSE "$PACOTE foi instalado" "$PACOTE nao foi instalado"
 done
 
 # altera o idioma:
