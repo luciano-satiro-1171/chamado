@@ -33,9 +33,9 @@ Este projeto foi desenvolvido com base na minha experiência anterior no quartel
 - `cd chamado/web/`
 
 6. Verifique 2 IPs livres na sua rede. Então faça ajustes de endereço ip nos arquivos:
-- Termina 1 (db):
+- Terminal 1 (db):
 - `nano Vagrantfile` # para salvar e sair: Ctrl + O depois Ctrl + X
-- Termina 2 (web):
+- Terminal 2 (web):
 - `nano Vagrantfile` # para salvar e sair: Ctrl + O depois Ctrl + X
 - `nano conf/config.php` # para salvar e sair: Ctrl + O depois Ctrl + X
 
