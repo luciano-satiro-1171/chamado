@@ -21,6 +21,6 @@ Vagrant.configure("2") do |config|
   # configuracoes do vagrant:
   config.vm.box = "xenial-server-cloudimg-amd64-vagrant"
   config.vm.network "public_network", ip: "192.168.10.50"
-  config.vm.provision "shell", path: "script.sh"
-  config.vm.provision "shell", path: "db.sh"
+  config.vm.provision "shell", path: "shell/script.sh"
+  config.vm.provision "shell", path: "shell/db.sh"
 end # fim do |config|
