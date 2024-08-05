@@ -1,8 +1,7 @@
 # ignore os seguintes arquivos:
+.upload_github.sh
 web/ubuntu-xenial-16.04-cloudimg-console.log
 web/.vagrant
 web/html/index.html
 db/ubuntu-xenial-16.04-cloudimg-console.log
 db/.vagrant
-.upload_github.sh
-.test
