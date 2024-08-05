@@ -1,5 +1,5 @@
 # ignore os seguintes arquivos:
-\.upload_github.sh
+'.upload_github.sh'
 web/ubuntu-xenial-16.04-cloudimg-console.log
 web/.vagrant
 web/html/index.html
