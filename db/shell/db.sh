@@ -20,12 +20,12 @@ SQL_PASS_USER="chamado123"
 # funcoes:
 # evita repeticao do if e else:
 IF_ELSE() {
-        if [ $? -eq 0 ]; then
-                echo "[success] $1" >> $LOG
-        else
-                echo "[error] $2" >> $LOG
-                return 1
-        fi
+    if [ $? -eq 0 ]; then
+        echo "[success] $1" >> $LOG
+    else
+        echo "[error] $2" >> $LOG
+        return 1
+    fi
 }
 
 # operacoes:

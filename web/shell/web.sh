@@ -17,12 +17,12 @@ LISTA="apache2 libapache2-mod-php php-mysql"
 # funcoes:
 # evita repeticao do if e else:
 IF_ELSE() {
-        if [ $? -eq 0 ]; then
-                echo "[success] $1" >> $LOG
-        else
-                echo "[error] $2" >> $LOG
-                return 1
-        fi
+    if [ $? -eq 0 ]; then
+        echo "[success] $1" >> $LOG
+    else
+        echo "[error] $2" >> $LOG
+        return 1
+    fi
 }
 
 # operacoes:
