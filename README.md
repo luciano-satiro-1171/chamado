@@ -53,7 +53,7 @@ ___
 - Terminal 1 (db):
 - `cat script.log`
 - `cat db.log`
-_____________________________________________________________________________________________________________________________
+___
 10. Inicie a página web:
 - Terminal 2 (web):
 - `vagrant up`
@@ -67,7 +67,7 @@ ________________________________________________________________________________
 - Terminal 2 (web):
 - `cat script.log`
 - `cat web.log`
-
+___
 13. Agora abra o seu browser e acesse os seguintes endereços:
 - `http://<ip_da_pagina_web>/chamado/index.html`
 - `http://<ip_da_pagina_web>/chamado/consultar.php`
