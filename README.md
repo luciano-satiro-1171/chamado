@@ -39,7 +39,7 @@ Este projeto foi desenvolvido com base na minha experiência anterior no quartel
 - Terminal 2 (web):
 - `nano Vagrantfile` # altere o ip e salvar e sair: Ctrl + O depois Ctrl + X
 - `nano conf/config.php` # altere o ip e salvar e sair: Ctrl + O depois Ctrl + X
-__
+___
 7. Inicie o banco de dados:
 - Terminal 1 (db):
 - `vagrant up`
