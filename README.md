@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto
 O "chamado" é um projeto que demonstra como configurar ambientes virtuais utilizando Vagrant.
-O objetivo é criar uma página web onde os usuários podem solicitar suporte à informática.
+O objetivo é criar uma página web onde os usuários possam solicitar suporte à informática.
 Este projeto foi desenvolvido com base na minha experiência anterior no quartel.
 
 ## Funcionalidades
