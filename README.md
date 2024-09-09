@@ -24,8 +24,7 @@ Este projeto foi desenvolvido com base na minha experiência anterior no quartel
 - Verifique se a imagem foi adicionada:
 - `vagrant box list`
 
-4. Agora, todas as pendências foram sanadas. Vamos à execução:
-   Clone este repositório para a sua máquina local (Exemplo):
+4. Agora, todas as pendências foram sanadas. Vamos à execução. Clone este repositório para a sua máquina local (Exemplo):
 - `git clone https://github.com/luciano-satiro-1171/chamado.git`
 
 5. Abra 2 terminais. O 1º é para o banco de dados e o 2º para a página web.
