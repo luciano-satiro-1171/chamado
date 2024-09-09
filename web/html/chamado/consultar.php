@@ -3,7 +3,7 @@
 // author:      luciano dos santos
 // contact:     https://www.linkedin.com/in/luciano-dos-santos-satiro
 // created:     23/06/2023
-// revision:    25/07/2024
+// revision:    09/09/2024
 // rule 1:      sem acento
 // rule 2:      restante em minusculo
 // description: consulta chamados tecnicos no banco de dados
@@ -97,6 +97,7 @@ header("Refresh:60");
       </style>
    </head>
 
+   <!-- corpo da pagina -->
    <body>
       <form name="consulta" action="deletar.php" method="post" accept-charset='utf-8'>
          <fieldset>
