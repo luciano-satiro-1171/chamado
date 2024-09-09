@@ -35,10 +35,10 @@ Este projeto foi desenvolvido com base na minha experiência anterior no quartel
 
 6. Verifique 2 IPs livres na sua rede. Então faça ajustes de endereço ip nos arquivos:
 - Terminal 1 (db):
-- `nano Vagrantfile` # para salvar e sair: Ctrl + O depois Ctrl + X
+- `nano Vagrantfile` # altere o ip e salvar e sair: Ctrl + O depois Ctrl + X
 - Terminal 2 (web):
-- `nano Vagrantfile` # para salvar e sair: Ctrl + O depois Ctrl + X
-- `nano conf/config.php` # para salvar e sair: Ctrl + O depois Ctrl + X
+- `nano Vagrantfile` # altere o ip e salvar e sair: Ctrl + O depois Ctrl + X
+- `nano conf/config.php` # altere o ip e salvar e sair: Ctrl + O depois Ctrl + X
 
 7. Inicie o banco de dados:
 - Terminal 1 (db):
