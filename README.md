@@ -13,10 +13,11 @@ Este projeto foi desenvolvido com base na minha experiência anterior no quartel
 
 ## Como Usar
 1. Certifique-se de ter o Git, Vagrant e o VirtualBox instalados na sua máquina.
+2. Obs.: este script foi testado em uma máquina com Linux Mint 21.3 Desktop.
 
-2. Certifique-se de ter uma imagem do Ubuntu Server 16.04 compatível com o Vagrant.
+3. Certifique-se de ter uma imagem do Ubuntu Server 16.04 compatível com o Vagrant.
 
-3. Dica para baixar a imagem do Ubuntu Server 16.04:
+4. Como baixar a imagem do Ubuntu Server 16.04:
 - `wget https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-vagrant.box`
 - Adicione ao Vagrant a imagem baixada:
 - `vagrant box add xenial-server-cloudimg-amd64-vagrant.box --name xenial-server-cloudimg-amd64-vagrant`
