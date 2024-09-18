@@ -17,7 +17,7 @@ Este projeto foi desenvolvido com base na minha experiência anterior no quartel
 
 2. Certifique-se de ter uma imagem do Ubuntu Server 16.04 compatível com o Vagrant.
 
-3. Como baixar a imagem do Ubuntu Server 16.04:
+3. Como baixar a imagem do Ubuntu Server 16.04 compatível com o Vagrant:
 - `wget https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-vagrant.box`
 - Adicione ao Vagrant a imagem baixada:
 - `vagrant box add xenial-server-cloudimg-amd64-vagrant.box --name xenial-server-cloudimg-amd64-vagrant`
