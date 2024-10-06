@@ -1,4 +1,4 @@
-# chamado
+# Abertura de Chamados
 
 ## Descrição do Projeto
 Abertura de Chamados é um projeto que demonstra como configurar ambientes virtuais utilizando Vagrant.
