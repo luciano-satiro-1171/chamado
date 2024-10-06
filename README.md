@@ -1,9 +1,9 @@
 # chamado
 
 ## Descrição do Projeto
-O "chamado" é um projeto que demonstra como configurar ambientes virtuais utilizando Vagrant.
+Abertura de Chamados é um projeto que demonstra como configurar ambientes virtuais utilizando Vagrant.
 O objetivo é criar uma página web onde os usuários possam solicitar suporte à informática.
-Este projeto foi desenvolvido com base na minha experiência anterior no quartel.
+Este projeto foi desenvolvido para atender as necessidades do Batalhão-Escola de Comunicações.
 
 ## Funcionalidades
 - Cria 2 máquinas virtuais usando Vagrant e VirtualBox.
